@@ -6,36 +6,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AurinCode</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         fetch("../assets/recursos.html")
             .then(r => r.text())
             .then(html => document.head.insertAdjacentHTML("beforeend", html));
     </script>
+
+    <style>
+
+    </style>
 </head>
 
-<body >
+<body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid px-5">
             <img src="../photos/aurincodelogo.png" alt="AurinCode Logo" width="120" height="60">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Benefícios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
-                    </li>
-
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Benefícios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    
+    <main class="container hero-section py-5">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+                <div
+                    class="inline-flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full text-sm mb-4 border border-white/10">
+                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                    Gestão Inteligente de Containers
+                </div>
+
+                <h1 class="display-3 fw-bold mb-4">
+                    Gerencie seus <br>
+                    <span style="color: #FFDF00;">CONTAINERS</span> com eficiência máxima!
+                </h1>
+
+                <p class="text-secondary fs-5 mb-5" style="max-width: 500px;">
+                    Controle completo de locações, manutenções e movimentações em uma única plataforma. Aumente sua
+                    produtividade em até 300%.
+                </p>
+
+                <div class="d-flex gap-3 mb-5">
+                    <button class="btn btn-yellow">Agende uma demonstração →</button>
+                </div>
+
+
+            </div>
+
+            <div class="col-lg-6 position-relative">
+                <div class="position-absolute shadow-lg"
+                    style="right: -10px; top: -20px; background: #FFDF00; color: black; padding: 10px 25px; border-radius: 15px; z-index: 10;">
+                    <small class="d-block fw-bold opacity-75">Receita Mensal</small>
+                    <span class="fs-4 fw-black">R$ 287K</span>
+                </div>
+
+                <div class="card-dashboard">
+                    <div class="inner-card">
+                        <div class="d-flex justify-content-between mb-4">
+                            <div class="d-flex gap-3 align-items-center">
+                                <div
+                                    style="background: #FFDF00; border-radius: 10px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                                    📦
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">Total de Containers</small>
+                                    <span class="fs-4 fw-bold">1,247</span>
+                                </div>
+                            </div>
+                            <span class="text-success fw-bold">+12.5%</span>
+                        </div>
+
+                        <div class="row g-2 mb-4">
+                            <div class="col-4">
+                                <div class="p-2 text-center rounded-3" style="background: rgba(255,255,255,0.05);">
+                                    <span class="d-block fw-bold" style="color: #FFDF00;">856</span>
+                                    <small style="font-size: 10px;;" class="text-muted uppercase">Locados</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-2 text-center rounded-3" style="background: rgba(255,255,255,0.05);">
+                                    <span class="d-block fw-bold text-warning">45</span>
+                                    <small style="font-size: 10px;" class="text-muted uppercase">Reparo</small>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="p-2 text-center rounded-3" style="background: rgba(255,255,255,0.05);">
+                                    <span class="d-block fw-bold text-primary">346</span>
+                                    <small style="font-size: 10px;" class="text-muted uppercase">Disponíveis</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-dark p-3 rounded-3 mb-2 d-flex align-items-center gap-3"
+                            style="background: rgba(255,255,255,0.03) !important;">
+                            <div class="bg-success rounded-circle d-flex align-items-center justify-content-center"
+                                style="width: 20px; height: 20px; font-size: 10px; color: white;">✓</div>
+                            <small class="m-0"  style="color: white;">Porto de Santos</small>
+                        </div>
+
+                        <div class="bg-dark p-3 rounded-3 d-flex align-items-center gap-3"
+                            style="background: rgba(255,255,255,0.03) !important;">
+                            <div class="bg-warning rounded-circle d-flex align-items-center justify-content-center"
+                                style="width: 20px; height: 20px; font-size: 10px;">🚚</div>
+                            <small class="m-0" style="color: white;">Destino: São Paulo</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
 </body>
 
 </html>

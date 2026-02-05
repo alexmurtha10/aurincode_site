@@ -1,0 +1,20 @@
+.navbar{
+    background-color: #333333 !important;
+    height: 77px !important;
+}
+
+.nav-link active{
+    color: #FFDF00 !important;
+}
+
+.nav-item a{
+    color: #D1D5DB !important;
+}
+
+.nav-item a:hover{
+    color: #FFDF00 !important;
+}
+
+#navbarNav{
+    padding-left: 30px;
+}

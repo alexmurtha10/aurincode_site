@@ -5,6 +5,67 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+
+/* ===== NAVBAR SCROLL ===== */
+nav {
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+nav.nav-scrolled {
+    background: rgba(16, 16, 16, 0.96) !important;
+    border-bottom-color: rgba(245, 200, 0, 0.12) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== CUSTOM CURSOR ===== */
+* { cursor: none; }
+#custom-cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: #F5C800;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
+}
+#custom-cursor-ring {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid rgba(245, 200, 0, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: left 0.12s ease, top 0.12s ease, width 0.25s ease, height 0.25s ease, opacity 0.2s ease;
+}
+#custom-cursor.cursor-hover { width: 16px; height: 16px; }
+#custom-cursor-ring.cursor-hover { width: 50px; height: 50px; border-color: rgba(245, 200, 0, 0.25); }
+
+/* ===== HERO BADGE PULSE ===== */
+@keyframes badgePulse {
+    0%   { box-shadow: 0 0 0 0 rgba(245, 200, 0, 0.35); }
+    70%  { box-shadow: 0 0 0 8px rgba(245, 200, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(245, 200, 0, 0); }
+}
+.hero-badge {
+    animation: badgePulse 2.5s ease-out 1s infinite;
+}
+
 /* ===== HERO ===== */
 .sobre-hero {
     padding: 120px 20px 80px;

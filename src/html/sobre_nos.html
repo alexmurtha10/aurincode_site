@@ -12,6 +12,8 @@
 </head>
 
 <body>
+<div id="custom-cursor"></div>
+<div id="custom-cursor-ring"></div>
 
     <!-- ═══════════ NAVBAR ═══════════ -->
     <nav>
@@ -52,7 +54,7 @@
         <div class="origem-inner">
 
             <!-- Mockup esquerda -->
-            <div class="origem-mockup-wrap">
+            <div class="origem-mockup-wrap reveal">
                 <div class="origem-mockup">
                     <div class="mockup-bar">
                         <div class="dot dot-red"></div>
@@ -135,7 +137,7 @@
             </div>
 
             <!-- Conteúdo direita -->
-            <div class="origem-content">
+            <div class="origem-content reveal reveal-delay-2">
                 <h2>A Origem da Inovação</h2>
                 <p>
                     Fundada em Macaé, Rio de Janeiro, o coração pulsante da indústria
@@ -187,7 +189,7 @@
 
     <!-- ═══════════ MISSÃO ═══════════ -->
     <section class="missao-section">
-        <div class="missao-card">
+        <div class="missao-card reveal">
             <div class="missao-icon-badge">
                 <i data-lucide="rocket" class="rocket-icon"></i>
             </div>
@@ -259,6 +261,62 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+
+        // ── SCROLL REVEAL ──
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // ── NAVBAR SCROLL EFFECT ──
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+        }, { passive: true });
+
+        // ── CUSTOM CURSOR ──
+        const cursor = document.getElementById('custom-cursor');
+        const cursorRing = document.getElementById('custom-cursor-ring');
+        let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        });
+
+        function animateRing() {
+            ringX += (mouseX - ringX) * 0.12;
+            ringY += (mouseY - ringY) * 0.12;
+            cursorRing.style.left = ringX + 'px';
+            cursorRing.style.top = ringY + 'px';
+            requestAnimationFrame(animateRing);
+        }
+        animateRing();
+
+        document.querySelectorAll('a, button, .origem-card').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
+                cursorRing.classList.add('cursor-hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+                cursorRing.classList.remove('cursor-hover');
+            });
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0'; cursorRing.style.opacity = '0';
+        });
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1'; cursorRing.style.opacity = '1';
+        });
     </script>
 </body>
 

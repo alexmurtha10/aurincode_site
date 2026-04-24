@@ -20,6 +20,13 @@
       --radius-sm: 8px;
     }
 
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 5%;
+}
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -55,11 +62,14 @@ body {
       background: rgba(26,26,26,0.88);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
+      height: 64px;
+    }
+
+    nav .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 5%;
-      height: 64px;
+      height: 100%;
     }
 
     .nav-logo {
@@ -127,13 +137,16 @@ body {
     /* ── HERO ── */
     .hero {
       min-height: 100vh;
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero .container {
       display: grid;
       grid-template-columns: 1fr 1.1fr;
       align-items: center;
-      padding: 100px 5% 80px;
       gap: 5%;
-      position: relative;
-      overflow: hidden;
+      min-height: calc(100vh - 180px);
     }
     .hero::after {
       content: '';
@@ -348,11 +361,10 @@ body {
     /* ── SOBRE ── */
     .sobre {
       background: var(--bg-section);
-      padding: 90px 5%;
+      padding: 90px 0;
       text-align: center;
     }
     .sobre-title {
-      font-family: var(--font-head);
       font-size: clamp(1.8rem, 3vw, 2.6rem);
       font-weight: 800;
       max-width: 640px;
@@ -405,7 +417,7 @@ body {
     }
 
     /* ── FUNCIONALIDADES ── */
-    .funcionalidades { padding: 90px 5%; }
+    .funcionalidades { padding: 90px 0; }
 
     .section-label {
       color: var(--yellow);
@@ -673,7 +685,7 @@ body {
 
     /* ── BENEFICIOS ── */
     .beneficios {
-      padding: 90px 5%;
+      padding: 90px 0;
       text-align: center;
     }
     .beneficios-title {
@@ -836,7 +848,10 @@ body {
     footer {
       background: var(--bg-section);
       border-top: 1px solid var(--border);
-      padding: 60px 5% 30px;
+      padding: 60px 0 30px;
+    }
+    footer .container {
+      width: 100%;
     }
     .footer-top {
       display: grid;

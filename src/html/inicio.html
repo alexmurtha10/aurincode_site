@@ -12,68 +12,72 @@
 
 <!-- ═══════════ NAVBAR ═══════════ -->
 <nav>
-  <a href="inicio.html" class="nav-logo">
-    <img src="../photos/aurincodelogo.png" alt="AurinCode Logo" class="logo-icon" />
-  </a>
-  <ul class="nav-links">
-    <li><a href="inicio.html" class="nav-active">Inicio</a></li>
-    <li><a href="sobre_nos.html" >Sobre Nós</a></li>
-    <li><a href="#">Soluções</a></li>
-    <li><a href="#">Contato</a></li>
-  </ul>
-  <div class="nav-actions">
-    <button class="btn-yellow">Solicitar demonstração</button>
+  <div class="container">
+    <a href="inicio.html" class="nav-logo">
+      <img src="../photos/aurincodelogo.png" alt="AurinCode Logo" class="logo-icon" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="inicio.html" class="nav-active">Inicio</a></li>
+      <li><a href="sobre_nos.html" >Sobre Nós</a></li>
+      <li><a href="#">Soluções</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-yellow">Solicitar demonstração</button>
+    </div>
   </div>
 </nav>
 
 <!-- ═══════════ HERO ═══════════ -->
 <section class="hero" id="inicio">
-  <div class="hero-left">
-    <div class="hero-badge">GESTÃO INTELIGENTE</div>
-    <h1 class="hero-title">
-      O controle total das suas<br>
-       <span class="accent">embalagens</span>
-      em um só lugar!
-    </h1>
-    <p class="hero-desc">
-      Sistema completo para cadastro, rastreamento de movimentações, cálculo de cobranças e controle de manutenções. Reduza custos e evite perdas.
-    </p>
-    <div class="hero-ctas">
-      <a href="#contato" class="btn-primary">Começar agora →</a>
-      <a href="#funcionalidades" class="btn-secondary">▶ Ver como funciona</a>
-    </div>
-    <div class="hero-checks">
-      <span>Implantação rápida</span>
-      <span>Suporte humanizado</span>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <div class="dashboard-mockup">
-      <div class="mockup-bar">
-        <div class="dot dot-red"></div>
-        <div class="dot dot-yellow"></div>
-        <div class="dot dot-green"></div>
+  <div class="container">
+    <div class="hero-left">
+      <div class="hero-badge">GESTÃO INTELIGENTE</div>
+      <h1 class="hero-title">
+        O controle total das suas<br>
+         <span class="accent">embalagens</span>
+        em um só lugar!
+      </h1>
+      <p class="hero-desc">
+        Sistema completo para cadastro, rastreamento de movimentações, cálculo de cobranças e controle de manutenções. Reduza custos e evite perdas.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contato" class="btn-primary">Começar agora →</a>
+        <a href="#funcionalidades" class="btn-secondary">▶ Ver como funciona</a>
       </div>
-      <div class="mockup-stats">
-        <div class="stat-card">
-          <div class="stat-label">Embalagens Ativas</div>
-          <div class="stat-value">4.892</div>
+      <div class="hero-checks">
+        <span>Implantação rápida</span>
+        <span>Suporte humanizado</span>
+      </div>
+    </div>
+  
+    <div class="hero-right">
+      <div class="dashboard-mockup">
+        <div class="mockup-bar">
+          <div class="dot dot-red"></div>
+          <div class="dot dot-yellow"></div>
+          <div class="dot dot-green"></div>
         </div>
-        <div class="stat-card">
-          <div class="stat-label">Custo Evitado</div>
-          <div class="stat-value yellow">R$ 12k</div>
+        <div class="mockup-stats">
+          <div class="stat-card">
+            <div class="stat-label">Embalagens Ativas</div>
+            <div class="stat-value">4.892</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">Custo Evitado</div>
+            <div class="stat-value yellow">R$ 12k</div>
+          </div>
+        </div>
+        <div class="chart-area">
+          <canvas id="heroChart"></canvas>
         </div>
       </div>
-      <div class="chart-area">
-        <canvas id="heroChart"></canvas>
-      </div>
-    </div>
-    <div class="badge-float">
-      <div class="icon">↗</div>
-      <div class="info">
-        <strong>Retorno de Ativos</strong>
-        <span>+34% este mês</span>
+      <div class="badge-float">
+        <div class="icon">↗</div>
+        <div class="info">
+          <strong>Retorno de Ativos</strong>
+          <span>+34% este mês</span>
+        </div>
       </div>
     </div>
   </div>
@@ -81,111 +85,115 @@
 
 <!-- ═══════════ SOBRE ═══════════ -->
 <section class="sobre" id="sobre">
-  <h2 class="sobre-title">A plataforma moderna para gestão de embalagens</h2>
-  <p class="sobre-desc">O AurinCode foi construído para resolver o caos do controle manual. 
-    Ferramenta completa para gestão eficiente de containers, locações e manutenções.</p>
-  <div class="cards-grid">
-    <div class="feature-card">
-      <div class="feature-icon">🔍</div>
-      <h3>Visibilidade Total</h3>
-      <p>Saiba exatamente onde cada embalagem está, com quem está e há quanto tempo. Acabe com o "sumiço" de ativos valiosos.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🧮</div>
-      <h3>Cobrança Automatizada</h3>
-      <p>Gere relatórios de tempo de posse e calcule cobranças ou multas automaticamente para fornecedores e clientes que retêm embalagens.</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-icon">🔧</div>
-      <h3>Ciclo de Vida</h3>
-      <p>Controle o número de viagens, programe manutenções preventivas e saiba o momento exato de aposentar um ativo.</p>
+  <div class="container">
+    <h2 class="sobre-title">A plataforma moderna para gestão de embalagens</h2>
+    <p class="sobre-desc">O AurinCode foi construído para resolver o caos do controle manual. 
+      Ferramenta completa para gestão eficiente de containers, locações e manutenções.</p>
+    <div class="cards-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <h3>Visibilidade Total</h3>
+        <p>Saiba exatamente onde cada embalagem está, com quem está e há quanto tempo. Acabe com o "sumiço" de ativos valiosos.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🧮</div>
+        <h3>Cobrança Automatizada</h3>
+        <p>Gere relatórios de tempo de posse e calcule cobranças ou multas automaticamente para fornecedores e clientes que retêm embalagens.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔧</div>
+        <h3>Ciclo de Vida</h3>
+        <p>Controle o número de viagens, programe manutenções preventivas e saiba o momento exato de aposentar um ativo.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ═══════════ FUNCIONALIDADES ═══════════ -->
 <section class="funcionalidades" id="funcionalidades">
-  <div class="section-label">RECURSOS PRINCIPAIS</div>
-  <h2 class="section-title">Tudo que você precisa para controlar suas embalagens.</h2>
-
-  <!-- Bloco 1: Cadastro -->
-  <div class="func-block">
-    <div class="table-mockup">
-      <div class="table-header">
-        <span>Cadastro de Embalagens</span>
-        <button class="btn-sm">+ Novo Item</button>
+  <div class="container">
+    <div class="section-label">RECURSOS PRINCIPAIS</div>
+    <h2 class="section-title">Tudo que você precisa para controlar suas embalagens.</h2>
+  
+    <!-- Bloco 1: Cadastro -->
+    <div class="func-block">
+      <div class="table-mockup">
+        <div class="table-header">
+          <span>Cadastro de Embalagens</span>
+          <button class="btn-sm">+ Novo Item</button>
+        </div>
+        <div class="table-cols">
+          <span>ID / SKU</span>
+          <span>Tipo</span>
+          <span>Status</span>
+          <span>Última Mov.</span>
+        </div>
+        <div class="table-row">
+          <span class="sku">CX-P-001</span>
+          <span>Caixa Plástica</span>
+          <span><span class="badge-status badge-transit">Em trânsito</span></span>
+          <span style="color:var(--text-muted);font-size:.83rem">Hoje, 08:30</span>
+        </div>
+        <div class="table-row">
+          <span class="sku">PLT-M-045</span>
+          <span>Palete Madeira</span>
+          <span><span class="badge-status badge-client">No cliente</span></span>
+          <span style="color:var(--text-muted);font-size:.83rem">Ontem, 14:15</span>
+        </div>
+        <div class="table-row">
+          <span class="sku">CNT-I-102</span>
+          <span>Contêiner Inox</span>
+          <span><span class="badge-status badge-manut">Manutenção</span></span>
+          <span style="color:var(--text-muted);font-size:.83rem">12/04/2026</span>
+        </div>
       </div>
-      <div class="table-cols">
-        <span>ID / SKU</span>
-        <span>Tipo</span>
-        <span>Status</span>
-        <span>Última Mov.</span>
-      </div>
-      <div class="table-row">
-        <span class="sku">CX-P-001</span>
-        <span>Caixa Plástica</span>
-        <span><span class="badge-status badge-transit">Em trânsito</span></span>
-        <span style="color:var(--text-muted);font-size:.83rem">Hoje, 08:30</span>
-      </div>
-      <div class="table-row">
-        <span class="sku">PLT-M-045</span>
-        <span>Palete Madeira</span>
-        <span><span class="badge-status badge-client">No cliente</span></span>
-        <span style="color:var(--text-muted);font-size:.83rem">Ontem, 14:15</span>
-      </div>
-      <div class="table-row">
-        <span class="sku">CNT-I-102</span>
-        <span>Contêiner Inox</span>
-        <span><span class="badge-status badge-manut">Manutenção</span></span>
-        <span style="color:var(--text-muted);font-size:.83rem">12/04/2026</span>
+      <div class="func-content">
+        <div class="feature-icon">📦</div>
+        <h3>Cadastro e Gestão de Estoque</h3>
+        <p>Mantenha um registro detalhado de todos os seus ativos. 
+          Classifique por tipo, material, dimensões e valor. Saiba instantaneamente o saldo em estoque interno versus o que está em posse de terceiros.</p>
+        <ul class="func-checks">
+          <li>Importação em massa via Excel/CSV</li>
+          <li>Histórico completo de vida útil</li>
+        </ul>
       </div>
     </div>
-    <div class="func-content">
-      <div class="feature-icon">📦</div>
-      <h3>Cadastro e Gestão de Estoque</h3>
-      <p>Mantenha um registro detalhado de todos os seus ativos. 
-        Classifique por tipo, material, dimensões e valor. Saiba instantaneamente o saldo em estoque interno versus o que está em posse de terceiros.</p>
-      <ul class="func-checks">
-        <li>Importação em massa via Excel/CSV</li>
-        <li>Histórico completo de vida útil</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- Bloco 2: Movimentações -->
-  <div class="func-block reverse">
-    <div class="func-content">
-      <div class="feature-icon">🔄</div>
-      <h3>Controle de Movimentações</h3>
-      <p>Registre envios e retornos com precisão. Inicie e finalize medições de tempo em clientes. Chega de planilhas desatualizadas.</p>
-      <ul class="func-checks">
-        <li>Check-in / Check-out via aplicativo</li>
-        <li>Rastreabilidade por cliente</li>
-      </ul>
-    </div>
-    <div class="timeline-mockup">
-      <div class="timeline-item active">
-        <div class="tl-left">
-          <h4>Saída de Fábrica</h4>
-          <p>Destino: Fornecedor A · 50 un.</p>
-        </div>
-        <div class="tl-right">10:00</div>
+  
+    <!-- Bloco 2: Movimentações -->
+    <div class="func-block reverse">
+      <div class="func-content">
+        <div class="feature-icon">🔄</div>
+        <h3>Controle de Movimentações</h3>
+        <p>Registre envios e retornos com precisão. Inicie e finalize medições de tempo em clientes. Chega de planilhas desatualizadas.</p>
+        <ul class="func-checks">
+          <li>Check-in / Check-out via aplicativo</li>
+          <li>Rastreabilidade por cliente</li>
+        </ul>
       </div>
-      <div style="width:2px;height:14px;background:var(--border);margin:0 auto;"></div>
-      <div class="timeline-item warning">
-        <div class="tl-left">
-          <h4>Em posse do Fornecedor</h4>
-          <p style="color:var(--yellow);font-size:.75rem;">Contagem de dias iniciada</p>
+      <div class="timeline-mockup">
+        <div class="timeline-item active">
+          <div class="tl-left">
+            <h4>Saída de Fábrica</h4>
+            <p>Destino: Fornecedor A · 50 un.</p>
+          </div>
+          <div class="tl-right">10:00</div>
         </div>
-        <div class="tl-right warning">5 dias</div>
-      </div>
-      <div style="width:2px;height:14px;background:var(--border);margin:0 auto;"></div>
-      <div class="timeline-item success">
-        <div class="tl-left">
-          <h4>Retorne à Base</h4>
-          <p>Aguardando recebimento</p>
+        <div style="width:2px;height:14px;background:var(--border);margin:0 auto;"></div>
+        <div class="timeline-item warning">
+          <div class="tl-left">
+            <h4>Em posse do Fornecedor</h4>
+            <p style="color:var(--yellow);font-size:.75rem;">Contagem de dias iniciada</p>
+          </div>
+          <div class="tl-right warning">5 dias</div>
         </div>
-        <div class="tl-right pending">Pendente</div>
+        <div style="width:2px;height:14px;background:var(--border);margin:0 auto;"></div>
+        <div class="timeline-item success">
+          <div class="tl-left">
+            <h4>Retorne à Base</h4>
+            <p>Aguardando recebimento</p>
+          </div>
+          <div class="tl-right pending">Pendente</div>
+        </div>
       </div>
     </div>
   </div>
@@ -195,28 +203,30 @@
 
 <!-- ═══════════ BENEFÍCIOS ═══════════ -->
 <section class="beneficios" id="beneficios">
-  <h2 class="beneficios-title">Por que escolher a AurinCode?</h2>
-  <p class="beneficios-desc">Resultados reais para a sua operação logística.</p>
-  <div class="ben-grid">
-    <div class="ben-card">
-      <div class="ben-number">90%</div>
-      <h4>Menos Perdas</h4>
-      <p>Redução drástica no sumiço de ativos com histórico completo de movimentações.</p>
-    </div>
-    <div class="ben-card">
-      <div class="ben-number">100%</div>
-      <h4>Auditabilidade</h4>
-      <p>Histórico imutável de quem esteve com a embalagem e por quanto tempo.</p>
-    </div>
-    <div class="ben-card">
-      <div class="ben-number">-30%</div>
-      <h4>Custos de Reposição</h4>
-      <p>Evite comprar embalagens novas apenas otimizando o giro das atuais.</p>
-    </div>
-    <div class="ben-card">
-      <div class="ben-number">Medições</div>
-      <h4>Cobranças</h4>
-      <p>Geração de relatórios de estadias para faturamento de embalagens.</p>
+  <div class="container">
+    <h2 class="beneficios-title">Por que escolher a AurinCode?</h2>
+    <p class="beneficios-desc">Resultados reais para a sua operação logística.</p>
+    <div class="ben-grid">
+      <div class="ben-card">
+        <div class="ben-number">90%</div>
+        <h4>Menos Perdas</h4>
+        <p>Redução drástica no sumiço de ativos com histórico completo de movimentações.</p>
+      </div>
+      <div class="ben-card">
+        <div class="ben-number">100%</div>
+        <h4>Auditabilidade</h4>
+        <p>Histórico imutável de quem esteve com a embalagem e por quanto tempo.</p>
+      </div>
+      <div class="ben-card">
+        <div class="ben-number">-30%</div>
+        <h4>Custos de Reposição</h4>
+        <p>Evite comprar embalagens novas apenas otimizando o giro das atuais.</p>
+      </div>
+      <div class="ben-card">
+        <div class="ben-number">Medições</div>
+        <h4>Cobranças</h4>
+        <p>Geração de relatórios de estadias para faturamento de embalagens.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -258,55 +268,58 @@
 
 <!-- ═══════════ FOOTER ═══════════ -->
 <footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <div class="nav-logo" style="display:flex;align-items:center;gap:10px;">
-        <img src="../photos/aurincodelogo.png" alt="AurinCode Logo" class="logo-icon" />
-      </div>
-      <p>O sistema definitivo para gestão, rastreamento e controle financeiro de embalagens retornáveis e ativos logísticos.</p>
-    </div>
-    <div class="footer-col">
-      <h5>Produto</h5>
-      <ul>
-        <li><a href="#">Funcionalidades</a></li>
-        <li><a href="#">Casos de Uso</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Empresa</h5>
-      <ul>
-        <li><a href="sobre_nos.html">Sobre nós</a></li>
-        <li><a href="#">Contato</a></li>
-        <li><a href="#">Suporte</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h5>Contato</h5>
-      <ul>
-        <li>
-          <a>📍</a>
-          <a>Macaé, RJ – Brasil</a>
-        </li>
-         <li>
-          <a>✉️</a>
-          <a>contato@aurincode.com.br</a>
-        </li>
-        <li>
-          <a>📞</a>
-          <a>(21) 99999-9999</a>
-        </li>
-      </ul>
-    </div>
-    
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 AurinCode. Todos os direitos reservados.</span>
-    <div class="footer-bottom-links">
-      <a href="#">Termos de Uso</a>
-      <a href="#">Política de Privacidade</a>
-    </div>
-  </div>
-</footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="nav-logo" style="display:flex;align-items:center;gap:10px;">
+                        <img src="../photos/aurincodelogo.png" alt="AurinCode Logo" class="logo-icon" />
+                    </div>
+                    <p>O sistema definitivo para gestão, rastreamento e controle financeiro de embalagens retornáveis e
+                        ativos logísticos.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Produto</h5>
+                    <ul>
+                        <li><a href="#">Funcionalidades</a></li>
+                        <li><a href="#">Casos de Uso</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Empresa</h5>
+                    <ul>
+                        <li><a href="sobre_nos.html">Sobre nós</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Suporte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Contato</h5>
+                    <ul>
+                        <li>
+                            <a>📍</a>
+                            <a>Macaé, RJ – Brasil</a>
+                        </li>
+                        <li>
+                            <a>✉️</a>
+                            <a>contato@aurincode.com.br</a>
+                        </li>
+                        <li>
+                            <a>📞</a>
+                            <a>(21) 99999-9999</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 AurinCode. Todos os direitos reservados.</span>
+                <div class="footer-bottom-links">
+                    <a href="#">Termos de Uso</a>
+                    <a href="#">Política de Privacidade</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 <!-- ═══════════ CHARTS JS ═══════════ -->
 <script>

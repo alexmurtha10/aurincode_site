@@ -840,7 +840,7 @@ body {
     }
     .footer-top {
       display: grid;
-      grid-template-columns: 1.8fr 1fr 1fr;
+      grid-template-columns: 1.8fr 1fr 1fr 1fr;
       gap: 40px;
       margin-bottom: 40px;
     }

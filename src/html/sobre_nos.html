@@ -24,14 +24,31 @@
             <ul class="nav-links">
                 <li><a href="inicio.html">Inicio</a></li>
                 <li><a href="sobre_nos.html" class="nav-active">Sobre Nós</a></li>
-                <li><a href="#">Soluções</a></li>
-                <li><a href="#">Contato</a></li>
+               
             </ul>
             <div class="nav-actions">
-                <button class="btn-yellow">Solicitar demonstração</button>
+                <button class="btn-yellow btn-yellow-desktop">Solicitar demonstração</button>
+                <button class="nav-menu-btn" id="navMenuBtn" aria-label="Abrir menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Popup dropdown -->
+        <div class="nav-popup" id="navPopup">
+            <ul>
+                <li><a href="inicio.html">Inicio</a></li>
+                <li><a href="sobre_nos.html" class="nav-active">Sobre Nós</a></li>
+                
+            </ul>
+            <div class="nav-popup-footer">
+                <button class="btn-yellow" style="width:100%;font-family:var(--font-body)">Solicitar demonstração</button>
             </div>
         </div>
     </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
 
     <!-- ═══════════ HERO SOBRE ═══════════ -->
     <section class="hero_sobre" id="inicio">
@@ -206,61 +223,73 @@
 
     <!-- ═══════════ FOOTER ═══════════ -->
     <footer>
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <div class="nav-logo" style="display:flex;align-items:center;gap:10px;">
-                        <img src="../photos/aurincodelogo.png" alt="AurinCode Logo" class="logo-icon" />
-                    </div>
-                    <p>O sistema definitivo para gestão, rastreamento e controle financeiro de embalagens retornáveis e
-                        ativos logísticos.</p>
-                </div>
-                <div class="footer-col">
-                    <h5>Produto</h5>
-                    <ul>
-                        <li><a href="#">Funcionalidades</a></li>
-                        <li><a href="#">Casos de Uso</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h5>Empresa</h5>
-                    <ul>
-                        <li><a href="sobre_nos.html">Sobre nós</a></li>
-                        <li><a href="#">Contato</a></li>
-                        <li><a href="#">Suporte</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h5>Contato</h5>
-                    <ul>
-                        <li>
-                            <a>📍</a>
-                            <a>Macaé, RJ – Brasil</a>
-                        </li>
-                        <li>
-                            <a>✉️</a>
-                            <a>contato@aurincode.com.br</a>
-                        </li>
-                        <li>
-                            <a>📞</a>
-                            <a>(21) 99999-9999</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="footer-bottom">
-                <span>© 2026 AurinCode. Todos os direitos reservados.</span>
-                <div class="footer-bottom-links">
-                    <a href="#">Termos de Uso</a>
-                    <a href="#">Política de Privacidade</a>
-                </div>
-            </div>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo" style="display:flex;align-items:center;gap:10px;">
+            <img src="../photos/aurincodelogo.png" alt="AurinCode Logo" class="logo-icon" />
+          </div>
+          <p>O sistema definitivo para gestão, rastreamento e controle financeiro de embalagens retornáveis e
+            ativos logísticos.</p>
         </div>
-    </footer>
+        <div class="footer-col">
+          <h5>Contato</h5>
+          <ul>
+            <li>
+              <a>📍</a>
+              <a>Macaé, RJ – Brasil</a>
+            </li>
+            <li>
+              <a>✉️</a>
+              <a>contato@aurincode.com.br</a>
+            </li>
+            <li>
+              <a>📞</a>
+              <a>(21) 99999-9999</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="sobre_nos.html">Sobre nós</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 AurinCode. Todos os direitos reservados.</span>
+
+      </div>
+    </div>
+  </footer>
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
+
+        // ── NAV POPUP MENU ──
+        const navMenuBtn = document.getElementById('navMenuBtn');
+        const navPopup   = document.getElementById('navPopup');
+        const navOverlay = document.getElementById('navOverlay');
+
+        function openMenu() {
+            navPopup.classList.add('open');
+            navOverlay.classList.add('active');
+            navMenuBtn.classList.add('active');
+        }
+        function closeMenu() {
+            navPopup.classList.remove('open');
+            navOverlay.classList.remove('active');
+            navMenuBtn.classList.remove('active');
+        }
+
+        navMenuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navPopup.classList.contains('open') ? closeMenu() : openMenu();
+        });
+        navOverlay.addEventListener('click', closeMenu);
+        navPopup.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
         // ── SCROLL REVEAL ──
         const revealObserver = new IntersectionObserver((entries) => {

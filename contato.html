@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AurinCode – Contato</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="/css/inicio.css">
+    <link rel="stylesheet" href="/css/contato.css">
+    <link rel="icon" type="image/png" href="photos/favicon.png">
+</head>
+
+<body>
+    <div id="custom-cursor"></div>
+    <div id="custom-cursor-ring"></div>
+
+    <div id="header-placeholder"></div>
+
+    <!-- ═══════════ HERO CONTATO ═══════════ -->
+    <section class="contato-hero">
+        <div class="contato-hero-inner">
+            <div class="hero-badge">FALE CONOSCO</div>
+            <h1>Vamos transformar sua<br><span class="accent">operação juntos</span></h1>
+            <p>Agende uma demonstração gratuita e descubra como a AurinCode pode eliminar perdas e automatizar sua gestão de embalagens.</p>
+        </div>
+    </section>
+
+    <!-- ═══════════ CONTATO PRINCIPAL ═══════════ -->
+    <section class="contato-section">
+        <div class="contato-inner">
+
+            <!-- Esquerda: info + FAQ -->
+            <div class="contato-left reveal">
+
+                <div class="contato-info">
+                    <h2>Informações de contato</h2>
+                    <p class="contato-info-desc">Nossa equipe está pronta para responder em até 24 horas úteis.</p>
+
+                    <div class="info-items">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <strong>Endereço</strong>
+                                <span>Macaé, RJ – Brasil</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div>
+                                <strong>E-mail</strong>
+                                <span>comercial@aurincode.tech</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <strong>Telefone</strong>
+                                <span>(22) 98170-9907</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div>
+                                <strong>Horário de atendimento</strong>
+                                <span>Seg – Sex, 08h às 18h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="faq-section">
+                    <h3>Perguntas frequentes</h3>
+
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Quanto tempo leva a implantação?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>A implantação básica é feita em até 5 dias úteis. Para operações maiores com integrações customizadas, o prazo varia de acordo com a complexidade do projeto.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>O sistema funciona para qualquer tipo de embalagem?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sim. A AurinCode foi desenvolvida para suportar qualquer tipo de ativo retornável: pallets, containers, caixas, skids, racks e muito mais.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Existe suporte após a implantação?</span>
+                                <i data-lucide="chevron-down" class="faq-icon"></i>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sim. Oferecemos suporte humanizado por e-mail e telefone, com um gerente de conta dedicado para acompanhar sua operação.</p>
+                            </div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Direita: formulário -->
+            <div class="contato-right reveal reveal-delay-2">
+                <div class="contato-form-card">
+                    <h3>Solicitar Demonstração</h3>
+                    <p>Preencha o formulário e entraremos em contato em breve.</p>
+
+                    <div class="form-group">
+                        <label>Nome completo</label>
+                        <input type="text" id="nome" placeholder="Seu nome" />
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail corporativo</label>
+                        <input type="email" id="email" placeholder="seu@email.com" />
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Telefone</label>
+                            <input type="tel" id="telefone" placeholder="(22) 99999-9999" />
+                        </div>
+                        <div class="form-group">
+                            <label>Empresa</label>
+                            <input type="text" id="empresa" placeholder="Nome da empresa" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Tamanho da frota de embalagens</label>
+                        <select id="frota">
+                            <option value="">Selecione...</option>
+                            <option>Até 100 unidades</option>
+                            <option>100 – 300 unidades</option>
+                            <option>300 – 500 unidades</option>
+                            <option>Mais de 500 unidades</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Mensagem <span class="label-optional">(opcional)</span></label>
+                        <textarea id="mensagem" rows="4" placeholder="Conte um pouco sobre sua operação..."></textarea>
+                    </div>
+
+                    <button class="btn-form-contato" id="btnEnviar">
+                        Enviar solicitação
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+
+                    <p class="form-privacy">
+                        <i data-lucide="shield-check"></i>
+                        Seus dados estão seguros e não serão compartilhados.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+
+        // ── HEADER ──
+        fetch('/components/header.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('header-placeholder').innerHTML = html;
+
+                const currentPage = window.location.pathname.replace('/', '');
+                document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
+                    if (link.dataset.page === currentPage) {
+                        link.classList.add('nav-active');
+                    }
+                });
+
+                const navMenuBtn = document.getElementById('navMenuBtn');
+                const navPopup   = document.getElementById('navPopup');
+                const navOverlay = document.getElementById('navOverlay');
+
+                function openMenu() {
+                    navPopup.classList.add('open');
+                    navOverlay.classList.add('active');
+                    navMenuBtn.classList.add('active');
+                }
+                function closeMenu() {
+                    navPopup.classList.remove('open');
+                    navOverlay.classList.remove('active');
+                    navMenuBtn.classList.remove('active');
+                }
+
+                navMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    navPopup.classList.contains('open') ? closeMenu() : openMenu();
+                });
+                navOverlay.addEventListener('click', closeMenu);
+                navPopup.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+                const nav = document.querySelector('nav');
+                window.addEventListener('scroll', () => {
+                    nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+                }, { passive: true });
+            });
+
+        // ── FOOTER ──
+        fetch('/components/footer.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+                lucide.createIcons();
+            });
+
+        lucide.createIcons();
+
+        // ── SCROLL REVEAL ──
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // ── FAQ ACCORDION ──
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.closest('.faq-item');
+                const isOpen = item.classList.contains('open');
+
+                // Fecha todos
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                document.querySelectorAll('.faq-question').forEach(b => b.setAttribute('aria-expanded', 'false'));
+
+                // Abre o clicado se estava fechado
+                if (!isOpen) {
+                    item.classList.add('open');
+                    btn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // ── FORM SUBMIT ──
+document.getElementById('btnEnviar').addEventListener('click', async () => {
+    const nome     = document.getElementById('nome');
+    const email    = document.getElementById('email');
+    const frota    = document.getElementById('frota');
+    const telefone = document.getElementById('telefone');
+    const empresa  = document.getElementById('empresa');
+    const mensagem = document.getElementById('mensagem');
+    const btn      = document.getElementById('btnEnviar');
+
+    let ok = true;
+    [nome, email, frota].forEach(field => {
+        if (!field.value.trim()) {
+            field.style.borderColor = '#EF4444';
+            ok = false;
+        } else {
+            field.style.borderColor = '';
+        }
+    });
+    if (!ok) return;
+
+    btn.disabled = true;
+    btn.innerHTML = 'Enviando... <i data-lucide="loader"></i>';
+    lucide.createIcons();
+
+    try {
+        const res = await fetch('https://contatos.aurincode.tech/ctt/contato', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                nome:     nome.value.trim(),
+                email:    email.value.trim(),
+                telefone: telefone.value.trim(),
+                empresa:  empresa.value.trim(),
+                frota:    frota.value,
+                mensagem: mensagem.value.trim(),
+            }),
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+            btn.innerHTML = '✓ Solicitação enviada!';
+            btn.style.background = '#22C55E';
+            btn.style.color = '#fff';
+        } else {
+            btn.disabled = false;
+            btn.innerHTML = 'Enviar solicitação <i data-lucide="arrow-right"></i>';
+            lucide.createIcons();
+            const msg = Array.isArray(data.message) ? data.message[0] : data.message;
+            alert(msg || 'Erro ao enviar. Tente novamente.');
+        }
+
+    } catch (err) {
+        btn.disabled = false;
+        btn.innerHTML = 'Enviar solicitação <i data-lucide="arrow-right"></i>';
+        lucide.createIcons();
+        alert('Falha de conexão. Verifique sua internet e tente novamente.');
+    }
+});
+
+        // ── CUSTOM CURSOR ──
+        const cursor = document.getElementById('custom-cursor');
+        const cursorRing = document.getElementById('custom-cursor-ring');
+        let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        });
+
+        function animateRing() {
+            ringX += (mouseX - ringX) * 0.12;
+            ringY += (mouseY - ringY) * 0.12;
+            cursorRing.style.left = ringX + 'px';
+            cursorRing.style.top = ringY + 'px';
+            requestAnimationFrame(animateRing);
+        }
+        animateRing();
+
+        document.querySelectorAll('a, button, input, select, textarea').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('cursor-hover');
+                cursorRing.classList.add('cursor-hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('cursor-hover');
+                cursorRing.classList.remove('cursor-hover');
+            });
+        });
+
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+            cursorRing.style.opacity = '0';
+        });
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+            cursorRing.style.opacity = '1';
+        });
+
+    </script>
+</body>
+
+</html>

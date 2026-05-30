@@ -7,46 +7,15 @@
   <title>AurinCode – Gestão Inteligente de Embalagens</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="/css/inicio.css">
+  <link rel="icon" type="image/png" href="/photos/favicon.png">
 </head>
 
 <body>
 
   <!-- ═══════════ NAVBAR ═══════════ -->
-  <nav>
-    <div class="container">
-      <a href="inicio" class="nav-logo">
-        <img src="/photos/aurincodelogo.png" alt="AurinCode Logo" class="logo-icon" />
-      </a>
-      <ul class="nav-links">
-        <li><a href="inicio" class="nav-active">Inicio</a></li>
-        <li><a href="sobre">Sobre Nós</a></li>
-        
-      </ul>
-      <div class="nav-actions">
-        <button class="btn-yellow btn-yellow-desktop">Solicitar demonstração</button>
-        <!-- Botão 3 pontos: visível apenas em tablet/mobile -->
-        <button class="nav-menu-btn" id="navMenuBtn" aria-label="Abrir menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Popup dropdown -->
-    <div class="nav-popup" id="navPopup">
-      <ul>
-        <li><a href="inicio" class="nav-active">Inicio</a></li>
-        <li><a href="sobre">Sobre Nós</a></li>
-        
-      </ul>
-      <div class="nav-popup-footer">
-        <button class="btn-yellow" style="width:100%;font-family:var(--font-body)">Solicitar demonstração</button>
-      </div>
-    </div>
-  </nav>
-  <div class="nav-overlay" id="navOverlay"></div>
+  <div id="header-placeholder"></div>
 
   <!-- ═══════════ HERO ═══════════ -->
   <section class="hero" id="inicio">
@@ -63,7 +32,7 @@
           Reduza custos e evite perdas.
         </p>
         <div class="hero-ctas">
-          <a href="#contato" class="btn-primary">Começar agora →</a>
+          <a href="/contato" class="btn-primary">Começar agora →</a>
           <a href="#funcionalidades" class="btn-secondary">▶ Ver como funciona</a>
         </div>
         <div class="hero-checks">
@@ -114,20 +83,17 @@
         <div class="feature-card reveal reveal-delay-1">
           <div class="feature-icon">🔍</div>
           <h3>Visibilidade Total</h3>
-          <p>Saiba exatamente onde cada embalagem está, com quem está e há quanto tempo. Acabe com o "sumiço" de ativos
-            valiosos.</p>
+          <p>Saiba exatamente onde cada embalagem está, com quem está e há quanto tempo.</p>
         </div>
         <div class="feature-card reveal reveal-delay-2">
           <div class="feature-icon">🧮</div>
           <h3>Cobrança Automatizada</h3>
-          <p>Gere relatórios de tempo de posse e calcule cobranças ou multas automaticamente para fornecedores e
-            clientes que retêm embalagens.</p>
+          <p>Gere relatórios de tempo de posse e calcule cobranças automaticamente.</p>
         </div>
         <div class="feature-card reveal reveal-delay-3">
           <div class="feature-icon">🔧</div>
           <h3>Ciclo de Vida</h3>
-          <p>Controle o número de locações, programe manutenções preventivas e saiba o momento exato de aposentar um
-            ativo.</p>
+          <p>Controle o número de locações, programe manutenções preventivas.</p>
         </div>
       </div>
     </div>
@@ -139,7 +105,6 @@
       <div class="section-label reveal">RECURSOS PRINCIPAIS</div>
       <h2 class="section-title reveal reveal-delay-1">Tudo que você precisa para controlar suas embalagens.</h2>
 
-      <!-- Bloco 1: Cadastro -->
       <div class="func-block reveal">
         <div class="table-mockup">
           <div class="table-header">
@@ -147,26 +112,20 @@
             <button class="btn-sm">+ Novo Item</button>
           </div>
           <div class="table-cols">
-            <span>Serial</span>
-            <span>Tipo</span>
-            <span>Status</span>
-            <span>Última Mov.</span>
+            <span>Serial</span><span>Tipo</span><span>Status</span><span>Última Mov.</span>
           </div>
           <div class="table-row">
-            <span class="sku">CX-P-001</span>
-            <span>OPEN TOP 20'</span>
+            <span class="sku">CX-P-001</span><span>OPEN TOP 20'</span>
             <span><span class="badge-status badge-transit">Disponível</span></span>
             <span style="color:var(--text-muted);font-size:.83rem">Hoje, 08:30</span>
           </div>
           <div class="table-row">
-            <span class="sku">PLT-M-045</span>
-            <span>SKID</span>
+            <span class="sku">PLT-M-045</span><span>SKID</span>
             <span><span class="badge-status badge-client">Alocado</span></span>
             <span style="color:var(--text-muted);font-size:.83rem">Ontem, 14:15</span>
           </div>
           <div class="table-row">
-            <span class="sku">CNT-I-102</span>
-            <span>OPEN TOP 10'</span>
+            <span class="sku">CNT-I-102</span><span>OPEN TOP 10'</span>
             <span><span class="badge-status badge-manut">Manutenção</span></span>
             <span style="color:var(--text-muted);font-size:.83rem">12/04/2026</span>
           </div>
@@ -174,9 +133,7 @@
         <div class="func-content">
           <div class="feature-icon">📦</div>
           <h3>Cadastro e Gestão de Estoque</h3>
-          <p>Mantenha um registro detalhado de todos os seus ativos.
-            Classifique por tipo, material, dimensões e valor. Saiba instantaneamente o saldo em estoque interno versus
-            o que está em posse de terceiros.</p>
+          <p>Mantenha um registro detalhado de todos os seus ativos.</p>
           <ul class="func-checks">
             <li>Importação em massa via Excel/CSV</li>
             <li>Histórico completo de vida útil</li>
@@ -184,39 +141,27 @@
         </div>
       </div>
 
-      <!-- Bloco 2: Movimentações -->
       <div class="func-block reverse reveal">
-
         <div class="timeline-mockup">
           <div class="timeline-item active">
-            <div class="tl-left">
-              <h4>Saída de Fábrica</h4>
-              <p>Destino: Fornecedor A · 50 un.</p>
-            </div>
+            <div class="tl-left"><h4>Saída de Fábrica</h4><p>Destino: Fornecedor A · 50 un.</p></div>
             <div class="tl-right">10:00</div>
           </div>
           <div style="width:2px;height:14px;background:var(--border);margin:0 auto;"></div>
           <div class="timeline-item warning">
-            <div class="tl-left">
-              <h4>Em posse do Fornecedor</h4>
-              <p style="color:var(--yellow);font-size:.75rem;">Contagem de dias iniciada</p>
-            </div>
+            <div class="tl-left"><h4>Em posse do Fornecedor</h4><p style="color:var(--yellow);font-size:.75rem;">Contagem de dias iniciada</p></div>
             <div class="tl-right warning">5 dias</div>
           </div>
           <div style="width:2px;height:14px;background:var(--border);margin:0 auto;"></div>
           <div class="timeline-item success">
-            <div class="tl-left">
-              <h4>Retorne à Base</h4>
-              <p>Aguardando recebimento</p>
-            </div>
+            <div class="tl-left"><h4>Retorne à Base</h4><p>Aguardando recebimento</p></div>
             <div class="tl-right pending">Pendente</div>
           </div>
         </div>
         <div class="func-content">
           <div class="feature-icon">🔄</div>
           <h3>Controle de Movimentações</h3>
-          <p>Registre envios e retornos com precisão. Inicie e finalize medições de tempo em clientes. Chega de
-            planilhas desatualizadas.</p>
+          <p>Registre envios e retornos com precisão.</p>
           <ul class="func-checks">
             <li>Check-in / Check-out via aplicativo</li>
             <li>Rastreabilidade por cliente</li>
@@ -225,8 +170,6 @@
       </div>
     </div>
   </section>
-
-
 
   <!-- ═══════════ BENEFÍCIOS ═══════════ -->
   <section class="beneficios" id="beneficios">
@@ -258,92 +201,68 @@
     </div>
   </section>
 
-  <!-- ═══════════ CTA + CONTATO ═══════════ -->
-  <section class="cta-section" id="contato">
-    <div class="cta-inner">
-      <div class="cta-left reveal">
-        <h2>Pronto para assumir o controle?</h2>
-        <p>Agende uma demonstração gratuita e veja como a AurinCode pode transformar a gestão dos seus ativos
-          retornáveis.</p>
-        <div class="cta-btns">
-          <button class="btn-dark">Solicitar demonstração</button>
-          <button class="btn-outline-dark">Falar com vendas</button>
-        </div>
-      </div>
-      <div class="contact-form-card reveal reveal-delay-2">
-        <h3>Deixe seu contato</h3>
-        <div class="form-group">
-          <label>Nome completo</label>
-          <input type="text" placeholder="Alex Murtha" />
-        </div>
-        <div class="form-group">
-          <label>E-mail corporativo</label>
-          <input type="email" placeholder="alexmurtha@aurincode.com.br" />
-        </div>
-        <div class="form-group">
-          <label>Tamanho da frota de embalagens</label>
-          <select>
-            <option>Até 100 unidades</option>
-            <option>100 - 300 unidades</option>
-            <option>300 - 500 unidades</option>
-            <option>Mais de 500 unidades</option>
-          </select>
-        </div>
-        <button class="btn-form">Enviar solicitação</button>
-      </div>
-    </div>
-  </section>
 
-  <!-- ═══════════ FOOTER ═══════════ -->
-  <footer>
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="nav-logo" style="display:flex;align-items:center;gap:10px;">
-            <img src="/photos/aurincodelogo.png" alt="AurinCode Logo" class="logo-icon" />
-          </div>
-          <p>O sistema definitivo para gestão, rastreamento e controle financeiro de embalagens retornáveis e
-            ativos logísticos.</p>
-        </div>
-        <div class="footer-col">
-          <h5>Contato</h5>
-          <ul>
-            <li>
-              <a>📍</a>
-              <a>Macaé, RJ – Brasil</a>
-            </li>
-            <li>
-              <a>✉️</a>
-              <a>contato@aurincode.com.br</a>
-            </li>
-            <li>
-              <a>📞</a>
-              <a>(21) 99999-9999</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Empresa</h5>
-          <ul>
-            <li><a href="sobre">Sobre nós</a></li>
-
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 AurinCode. Todos os direitos reservados.</span>
-
-      </div>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
 
   <!-- ═══════════ CURSOR ═══════════ -->
   <div id="custom-cursor"></div>
   <div id="custom-cursor-ring"></div>
 
-  <!-- ═══════════ CHARTS JS ═══════════ -->
   <script>
-    // Hero mini chart
+
+    // ── HEADER ──
+    fetch('/components/header.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('header-placeholder').innerHTML = html;
+
+        // Marca página ativa pela URL
+        const currentPage = window.location.pathname.replace('/', '');
+        document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
+          if (link.dataset.page === currentPage) {
+            link.classList.add('nav-active');
+          }
+        });
+
+        // Eventos do menu — SEMPRE dentro do .then() pois dependem do header carregado
+        const navMenuBtn = document.getElementById('navMenuBtn');
+        const navPopup   = document.getElementById('navPopup');
+        const navOverlay = document.getElementById('navOverlay');
+
+        function openMenu() {
+          navPopup.classList.add('open');
+          navOverlay.classList.add('active');
+          navMenuBtn.classList.add('active');
+        }
+        function closeMenu() {
+          navPopup.classList.remove('open');
+          navOverlay.classList.remove('active');
+          navMenuBtn.classList.remove('active');
+        }
+
+        navMenuBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          navPopup.classList.contains('open') ? closeMenu() : openMenu();
+        });
+        navOverlay.addEventListener('click', closeMenu);
+        navPopup.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+        // Scroll effect — também dentro do .then()
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+          nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+        }, { passive: true });
+      });
+
+    // ── FOOTER ──
+    fetch('/components/footer.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('footer-placeholder').innerHTML = html;
+        lucide.createIcons();
+      });
+
+    // ── HERO CHART ──
     const heroCtx = document.getElementById('heroChart').getContext('2d');
     new Chart(heroCtx, {
       type: 'line',
@@ -368,16 +287,11 @@
         responsive: true,
         maintainAspectRatio: false,
         plugins: { legend: { display: false }, tooltip: { enabled: false } },
-        scales: {
-          x: { display: false },
-          y: { display: false }
-        },
+        scales: { x: { display: false }, y: { display: false } },
       }
     });
 
-
-
-    // Smooth scroll nav
+    // ── SMOOTH SCROLL ──
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const target = document.querySelector(a.getAttribute('href'));
@@ -385,39 +299,7 @@
       });
     });
 
-    // Form submit
-    document.querySelector('.btn-form').addEventListener('click', () => {
-      const inputs = document.querySelectorAll('.contact-form-card input');
-      let ok = true;
-      inputs.forEach(i => { if (!i.value.trim()) { i.style.borderColor = '#EF4444'; ok = false; } else { i.style.borderColor = '#E5E5E5'; } });
-      if (ok) {
-        document.querySelector('.btn-form').textContent = '✓ Solicitação enviada!';
-        document.querySelector('.btn-form').style.background = '#22C55E';
-      }
-    });
-
-    // ── NAV POPUP MENU ──
-    const navMenuBtn = document.getElementById('navMenuBtn');
-    const navPopup = document.getElementById('navPopup');
-    const navOverlay = document.getElementById('navOverlay');
-
-    function openMenu() {
-      navPopup.classList.add('open');
-      navOverlay.classList.add('active');
-      navMenuBtn.classList.add('active');
-    }
-    function closeMenu() {
-      navPopup.classList.remove('open');
-      navOverlay.classList.remove('active');
-      navMenuBtn.classList.remove('active');
-    }
-
-    navMenuBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      navPopup.classList.contains('open') ? closeMenu() : openMenu();
-    });
-    navOverlay.addEventListener('click', closeMenu);
-    navPopup.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+   
 
     // ── SCROLL REVEAL ──
     const revealObserver = new IntersectionObserver((entries) => {
@@ -428,18 +310,7 @@
         }
       });
     }, { threshold: 0.12 });
-
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    // ── NAVBAR SCROLL EFFECT ──
-    const nav = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 40) {
-        nav.classList.add('nav-scrolled');
-      } else {
-        nav.classList.remove('nav-scrolled');
-      }
-    }, { passive: true });
 
     // ── COUNTER ANIMATION ──
     const counterObserver = new IntersectionObserver((entries) => {
@@ -450,32 +321,26 @@
         const suffix = el.dataset.suffix || '';
         const prefix = el.dataset.prefix || '';
         if (isNaN(target)) return;
-
         let start = 0;
         const duration = 1400;
         const startTime = performance.now();
-
         const tick = (now) => {
           const elapsed = now - startTime;
           const progress = Math.min(elapsed / duration, 1);
-          // easeOutCubic
           const ease = 1 - Math.pow(1 - progress, 3);
-          const current = Math.round(ease * target);
-          el.textContent = prefix + current + suffix;
+          el.textContent = prefix + Math.round(ease * target) + suffix;
           if (progress < 1) requestAnimationFrame(tick);
         };
         requestAnimationFrame(tick);
         counterObserver.unobserve(el);
       });
     }, { threshold: 0.5 });
-
     document.querySelectorAll('.ben-number[data-target]').forEach(el => counterObserver.observe(el));
 
     // ── CUSTOM CURSOR ──
     const cursor = document.getElementById('custom-cursor');
     const cursorRing = document.getElementById('custom-cursor-ring');
-    let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
+    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
 
     document.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
@@ -484,7 +349,6 @@
       cursor.style.top = mouseY + 'px';
     });
 
-    // Ring follows with slight lag
     function animateRing() {
       ringX += (mouseX - ringX) * 0.12;
       ringY += (mouseY - ringY) * 0.12;
@@ -494,9 +358,7 @@
     }
     animateRing();
 
-    // Hover effect on interactive elements
-    const hoverTargets = document.querySelectorAll('a, button, input, select, .feature-card, .ben-card, .table-row');
-    hoverTargets.forEach(el => {
+    document.querySelectorAll('a, button, input, select, .feature-card, .ben-card, .table-row').forEach(el => {
       el.addEventListener('mouseenter', () => {
         cursor.classList.add('cursor-hover');
         cursorRing.classList.add('cursor-hover');
@@ -507,7 +369,6 @@
       });
     });
 
-    // Hide cursor when leaving window
     document.addEventListener('mouseleave', () => {
       cursor.style.opacity = '0';
       cursorRing.style.opacity = '0';
@@ -516,7 +377,7 @@
       cursor.style.opacity = '1';
       cursorRing.style.opacity = '1';
     });
+
   </script>
 </body>
-
 </html>

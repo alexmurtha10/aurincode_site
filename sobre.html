@@ -6,49 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AurinCode – Sobre Nós</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="/css/inicio.css">
     <link rel="stylesheet" href="/css/sobre.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="photos/favicon.png">
 </head>
 
 <body>
-<div id="custom-cursor"></div>
-<div id="custom-cursor-ring"></div>
+    <div id="custom-cursor"></div>
+    <div id="custom-cursor-ring"></div>
 
     <!-- ═══════════ NAVBAR ═══════════ -->
-    <nav>
-        <div class="container">
-            <a href="inicio" class="nav-logo">
-                <img src="/photos/aurincodelogo.png" alt="AurinCode Logo" class="logo-icon" />
-            </a>
-            <ul class="nav-links">
-                <li><a href="inicio">Inicio</a></li>
-                <li><a href="sobre" class="nav-active">Sobre Nós</a></li>
-               
-            </ul>
-            <div class="nav-actions">
-                <button class="btn-yellow btn-yellow-desktop">Solicitar demonstração</button>
-                <button class="nav-menu-btn" id="navMenuBtn" aria-label="Abrir menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-
-        <!-- Popup dropdown -->
-        <div class="nav-popup" id="navPopup">
-            <ul>
-                <li><a href="inicio">Inicio</a></li>
-                <li><a href="sobre" class="nav-active">Sobre Nós</a></li>
-                
-            </ul>
-            <div class="nav-popup-footer">
-                <button class="btn-yellow" style="width:100%;font-family:var(--font-body)">Solicitar demonstração</button>
-            </div>
-        </div>
-    </nav>
-    <div class="nav-overlay" id="navOverlay"></div>
+    <div id="header-placeholder"></div>
 
     <!-- ═══════════ HERO SOBRE ═══════════ -->
     <section class="hero_sobre" id="inicio">
@@ -70,7 +39,6 @@
     <section class="origem-section">
         <div class="origem-inner">
 
-            <!-- Mockup esquerda -->
             <div class="origem-mockup-wrap reveal">
                 <div class="origem-mockup">
                     <div class="mockup-bar">
@@ -79,7 +47,6 @@
                         <div class="dot dot-green"></div>
                     </div>
                     <div class="mockup-dashboard-img">
-                        <!-- Dashboard ilustrativo com gráficos -->
                         <div class="dash-illus">
                             <div class="dash-sidebar">
                                 <div class="dash-sb-item active"></div>
@@ -93,11 +60,8 @@
                                     <div class="dash-widget">
                                         <div class="widget-donut">
                                             <svg viewBox="0 0 60 60" width="60" height="60">
-                                                <circle cx="30" cy="30" r="22" fill="none" stroke="#2C2C2C"
-                                                    stroke-width="8" />
-                                                <circle cx="30" cy="30" r="22" fill="none" stroke="#F5C800"
-                                                    stroke-width="8" stroke-dasharray="90 48" stroke-linecap="round"
-                                                    transform="rotate(-90 30 30)" />
+                                                <circle cx="30" cy="30" r="22" fill="none" stroke="#2C2C2C" stroke-width="8" />
+                                                <circle cx="30" cy="30" r="22" fill="none" stroke="#F5C800" stroke-width="8" stroke-dasharray="90 48" stroke-linecap="round" transform="rotate(-90 30 30)" />
                                             </svg>
                                         </div>
                                     </div>
@@ -117,11 +81,8 @@
                                     <br>
                                     <div class="dash-widget">
                                         <div class="mini-line-wrap">
-                                            <svg viewBox="0 0 80 40" width="100%" height="40"
-                                                preserveAspectRatio="none">
-                                                <polyline points="0,35 15,25 30,30 45,10 60,20 75,5" fill="none"
-                                                    stroke="#F5C800" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
+                                            <svg viewBox="0 0 80 40" width="100%" height="40" preserveAspectRatio="none">
+                                                <polyline points="0,35 15,25 30,30 45,10 60,20 75,5" fill="none" stroke="#F5C800" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </div>
                                     </div>
@@ -136,11 +97,8 @@
                                                             <stop offset="100%" stop-color="#F5C800" stop-opacity="0" />
                                                         </linearGradient>
                                                     </defs>
-                                                    <polygon
-                                                        points="0,50 0,40 15,30 30,35 45,20 60,25 75,10 90,15 100,5 100,50"
-                                                        fill="url(#ag)" />
-                                                    <polyline points="0,40 15,30 30,35 45,20 60,25 75,10 90,15 100,5"
-                                                        fill="none" stroke="#F5C800" stroke-width="2" />
+                                                    <polygon points="0,50 0,40 15,30 30,35 45,20 60,25 75,10 90,15 100,5 100,50" fill="url(#ag)" />
+                                                    <polyline points="0,40 15,30 30,35 45,20 60,25 75,10 90,15 100,5" fill="none" stroke="#F5C800" stroke-width="2" />
                                                 </svg>
                                             </div>
                                         </div>
@@ -150,10 +108,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
 
-            <!-- Conteúdo direita -->
             <div class="origem-content reveal reveal-delay-2">
                 <h2>A Origem da Inovação</h2>
                 <p>
@@ -176,9 +132,7 @@
                 <div class="origem-cards">
                     <div class="origem-card">
                         <div class="origem-card-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
                                 <polyline points="17 6 23 6 23 12"></polyline>
                             </svg>
@@ -186,12 +140,9 @@
                         <h4>Expertise Real</h4>
                         <p>Anos de experiência prática em gestão de suprimentos complexos.</p>
                     </div>
-
                     <div class="origem-card">
                         <div class="origem-card-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                             </svg>
                         </div>
@@ -221,75 +172,64 @@
         </div>
     </section>
 
-    <!-- ═══════════ FOOTER ═══════════ -->
-    <footer>
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <div class="nav-logo" style="display:flex;align-items:center;gap:10px;">
-            <img src="/photos/aurincodelogo.png" alt="AurinCode Logo" class="logo-icon" />
-          </div>
-          <p>O sistema definitivo para gestão, rastreamento e controle financeiro de embalagens retornáveis e
-            ativos logísticos.</p>
-        </div>
-        <div class="footer-col">
-          <h5>Contato</h5>
-          <ul>
-            <li>
-              <a>📍</a>
-              <a>Macaé, RJ – Brasil</a>
-            </li>
-            <li>
-              <a>✉️</a>
-              <a>contato@aurincode.com.br</a>
-            </li>
-            <li>
-              <a>📞</a>
-              <a>(21) 99999-9999</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>Empresa</h5>
-          <ul>
-            <li><a href="sobre">Sobre nós</a></li>
+    <div id="footer-placeholder"></div>
 
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 AurinCode. Todos os direitos reservados.</span>
-
-      </div>
-    </div>
-  </footer>
-
-    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
+
+        // ── HEADER ──
+        fetch('/components/header.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('header-placeholder').innerHTML = html;
+
+                // Marca página ativa pela URL
+                const currentPage = window.location.pathname.replace('/', '');
+                document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
+                    if (link.dataset.page === currentPage) {
+                        link.classList.add('nav-active');
+                    }
+                });
+
+                // Eventos do menu — dentro do .then() pois dependem do header carregado
+                const navMenuBtn = document.getElementById('navMenuBtn');
+                const navPopup   = document.getElementById('navPopup');
+                const navOverlay = document.getElementById('navOverlay');
+
+                function openMenu() {
+                    navPopup.classList.add('open');
+                    navOverlay.classList.add('active');
+                    navMenuBtn.classList.add('active');
+                }
+                function closeMenu() {
+                    navPopup.classList.remove('open');
+                    navOverlay.classList.remove('active');
+                    navMenuBtn.classList.remove('active');
+                }
+
+                navMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    navPopup.classList.contains('open') ? closeMenu() : openMenu();
+                });
+                navOverlay.addEventListener('click', closeMenu);
+                navPopup.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+                // Scroll effect
+                const nav = document.querySelector('nav');
+                window.addEventListener('scroll', () => {
+                    nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+                }, { passive: true });
+            });
+
+        // ── FOOTER ──
+        fetch('/components/footer.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').innerHTML = html;
+                lucide.createIcons();
+            });
+
+        // ── LUCIDE (ícone rocket da missão) ──
         lucide.createIcons();
-
-        // ── NAV POPUP MENU ──
-        const navMenuBtn = document.getElementById('navMenuBtn');
-        const navPopup   = document.getElementById('navPopup');
-        const navOverlay = document.getElementById('navOverlay');
-
-        function openMenu() {
-            navPopup.classList.add('open');
-            navOverlay.classList.add('active');
-            navMenuBtn.classList.add('active');
-        }
-        function closeMenu() {
-            navPopup.classList.remove('open');
-            navOverlay.classList.remove('active');
-            navMenuBtn.classList.remove('active');
-        }
-
-        navMenuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            navPopup.classList.contains('open') ? closeMenu() : openMenu();
-        });
-        navOverlay.addEventListener('click', closeMenu);
-        navPopup.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
         // ── SCROLL REVEAL ──
         const revealObserver = new IntersectionObserver((entries) => {
@@ -301,12 +241,6 @@
             });
         }, { threshold: 0.12 });
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-        // ── NAVBAR SCROLL EFFECT ──
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('nav-scrolled', window.scrollY > 40);
-        }, { passive: true });
 
         // ── CUSTOM CURSOR ──
         const cursor = document.getElementById('custom-cursor');
@@ -341,11 +275,14 @@
         });
 
         document.addEventListener('mouseleave', () => {
-            cursor.style.opacity = '0'; cursorRing.style.opacity = '0';
+            cursor.style.opacity = '0';
+            cursorRing.style.opacity = '0';
         });
         document.addEventListener('mouseenter', () => {
-            cursor.style.opacity = '1'; cursorRing.style.opacity = '1';
+            cursor.style.opacity = '1';
+            cursorRing.style.opacity = '1';
         });
+
     </script>
 </body>
 

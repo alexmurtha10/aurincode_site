@@ -1,36 +1,127 @@
-<nav>
-    <div class="container">
-        <a href="/inicio" class="nav-logo">
-            <img src="/photos/aurincode-logo-dark-transparent.svg" alt="AurinCode Logo" class="logo-icon" />
-        </a>
-        <ul class="nav-links">
-            <li><a href="/inicio" data-page="inicio">Inicio</a></li>
-            <li><a href="/sobre" data-page="sobre">Sobre Nós</a></li>
-            <li><a href="/contato" data-page="contato">Contato</a></li>
-        </ul>
-        <div class="nav-actions">
-            <a href="/contato" class="btn-yellow btn-yellow-desktop">Solicitar Demonstração</a>
-            <button class="nav-menu-btn" id="navMenuBtn" aria-label="Abrir menu">
+<header>
+    <nav id="navbar">
+        <div class="nav-container">
+
+            <a href="/inicio" class="nav-logo">
+                <img
+                    src="/photos/aurincode-logo-dark-transparent.svg"
+                    alt="AurinCode"
+                    class="logo-icon">
+            </a>
+
+            <!-- MENU DESKTOP -->
+            <div class="nav-links">
+                <a href="/inicio" class="nav-link" data-page="inicio">Início</a>
+                <a href="/sobre" class="nav-link" data-page="sobre">Sobre Nós</a>
+                <a href="/contato" class="nav-link" data-page="contato">Contato</a>
+            </div>
+
+            <a href="/contato" class="btn-yellow-desktop">
+                Solicitar Demonstração
+            </a>
+
+            <!-- BOTÃO MOBILE -->
+            <button class="nav-menu-btn" id="navMenuBtn">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-        </div>
-    </div>
 
-    <div class="nav-popup" id="navPopup">
-        <ul>
-            <li><a href="/inicio" data-page="inicio">Inicio</a></li>
-            <li><a href="/sobre" data-page="sobre">Sobre Nós</a></li>
-            <li><a href="/contato" data-page="contato">Contato</a></li>
-
-        </ul>
-        <div class="nav-popup-footer">
-            <a href="/contato" class="btn-yellow"
-                style="width:100%;font-family:var(--font-body);display:block;text-align:center;">
-                Solicitar demonstração
-            </a>
         </div>
-    </div>
-</nav>
-<div class="nav-overlay" id="navOverlay"></div>
+
+        <!-- MENU MOBILE -->
+        <div class="nav-popup" id="navPopup">
+
+            <ul>
+                <li>
+                    <a href="/inicio" class="nav-link-mobile" data-page="inicio">
+                        Início
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/sobre" class="nav-link-mobile" data-page="sobre">
+                        Sobre Nós
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/contato" class="nav-link-mobile" data-page="contato">
+                        Contato
+                    </a>
+                </li>
+            </ul>
+
+            <div class="nav-popup-footer">
+                <a href="/contato" class="btn-yellow-mobile">
+                    Solicitar Demonstração
+                </a>
+            </div>
+
+        </div>
+
+        <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const navMenuBtn = document.getElementById('navMenuBtn');
+    const navPopup = document.getElementById('navPopup');
+    const navOverlay = document.getElementById('navOverlay');
+
+    if (navMenuBtn) {
+
+        navMenuBtn.addEventListener('click', () => {
+
+            navMenuBtn.classList.toggle('active');
+            navPopup.classList.toggle('open');
+            navOverlay.classList.toggle('active');
+
+        });
+
+        navOverlay.addEventListener('click', () => {
+
+            navMenuBtn.classList.remove('active');
+            navPopup.classList.remove('open');
+            navOverlay.classList.remove('active');
+
+        });
+
+    }
+
+    window.addEventListener('scroll', () => {
+
+        const navbar = document.getElementById('navbar');
+
+        if (window.scrollY > 10) {
+            navbar.classList.add('nav-scrolled');
+        } else {
+            navbar.classList.remove('nav-scrolled');
+        }
+
+    });
+
+    const currentPath = window.location.pathname;
+
+    let currentPage = 'inicio';
+
+    if (currentPath.includes('sobre')) {
+        currentPage = 'sobre';
+    }
+
+    if (currentPath.includes('contato')) {
+        currentPage = 'contato';
+    }
+
+    document.querySelectorAll('[data-page]').forEach(item => {
+
+        if (item.dataset.page === currentPage) {
+            item.classList.add('nav-active');
+        }
+
+    });
+
+});
+</script>

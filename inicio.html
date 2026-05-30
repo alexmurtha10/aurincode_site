@@ -9,6 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="/css/inicio.css">
+  <link rel="stylesheet" href="/css/header.css">
   <link rel="icon" type="image/png" href="/photos/favicon.png">
 </head>
 
@@ -211,48 +212,48 @@
   <script>
 
     // ── HEADER ──
-    fetch('/components/header.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('header-placeholder').innerHTML = html;
+        fetch('/components/header.html')
+            .then(res => res.text())
+            .then(html => {
+                document.getElementById('header-placeholder').innerHTML = html;
 
-        // Marca página ativa pela URL
-        const currentPage = window.location.pathname.replace('/', '');
-        document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
-          if (link.dataset.page === currentPage) {
-            link.classList.add('nav-active');
-          }
-        });
+                // Marca página ativa pela URL
+                const currentPage = window.location.pathname.replace('/', '');
+                document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
+                    if (link.dataset.page === currentPage) {
+                        link.classList.add('nav-active');
+                    }
+                });
 
-        // Eventos do menu — SEMPRE dentro do .then() pois dependem do header carregado
-        const navMenuBtn = document.getElementById('navMenuBtn');
-        const navPopup   = document.getElementById('navPopup');
-        const navOverlay = document.getElementById('navOverlay');
+                // Eventos do menu — dentro do .then() pois dependem do header carregado
+                const navMenuBtn = document.getElementById('navMenuBtn');
+                const navPopup   = document.getElementById('navPopup');
+                const navOverlay = document.getElementById('navOverlay');
 
-        function openMenu() {
-          navPopup.classList.add('open');
-          navOverlay.classList.add('active');
-          navMenuBtn.classList.add('active');
-        }
-        function closeMenu() {
-          navPopup.classList.remove('open');
-          navOverlay.classList.remove('active');
-          navMenuBtn.classList.remove('active');
-        }
+                function openMenu() {
+                    navPopup.classList.add('open');
+                    navOverlay.classList.add('active');
+                    navMenuBtn.classList.add('active');
+                }
+                function closeMenu() {
+                    navPopup.classList.remove('open');
+                    navOverlay.classList.remove('active');
+                    navMenuBtn.classList.remove('active');
+                }
 
-        navMenuBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          navPopup.classList.contains('open') ? closeMenu() : openMenu();
-        });
-        navOverlay.addEventListener('click', closeMenu);
-        navPopup.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+                navMenuBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    navPopup.classList.contains('open') ? closeMenu() : openMenu();
+                });
+                navOverlay.addEventListener('click', closeMenu);
+                navPopup.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
-        // Scroll effect — também dentro do .then()
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-          nav.classList.toggle('nav-scrolled', window.scrollY > 40);
-        }, { passive: true });
-      });
+                // Scroll effect
+                const nav = document.querySelector('nav');
+                window.addEventListener('scroll', () => {
+                    nav.classList.toggle('nav-scrolled', window.scrollY > 40);
+                }, { passive: true });
+            });
 
     // ── FOOTER ──
     fetch('/components/footer.html')

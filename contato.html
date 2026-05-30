@@ -9,6 +9,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="/css/inicio.css">
     <link rel="stylesheet" href="/css/contato.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="icon" type="image/png" href="photos/favicon.png">
 </head>
 
@@ -184,6 +185,7 @@
             .then(html => {
                 document.getElementById('header-placeholder').innerHTML = html;
 
+                // Marca página ativa pela URL
                 const currentPage = window.location.pathname.replace('/', '');
                 document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
                     if (link.dataset.page === currentPage) {
@@ -191,6 +193,7 @@
                     }
                 });
 
+                // Eventos do menu — dentro do .then() pois dependem do header carregado
                 const navMenuBtn = document.getElementById('navMenuBtn');
                 const navPopup   = document.getElementById('navPopup');
                 const navOverlay = document.getElementById('navOverlay');
@@ -213,6 +216,7 @@
                 navOverlay.addEventListener('click', closeMenu);
                 navPopup.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
+                // Scroll effect
                 const nav = document.querySelector('nav');
                 window.addEventListener('scroll', () => {
                     nav.classList.toggle('nav-scrolled', window.scrollY > 40);
